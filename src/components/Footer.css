@@ -1,0 +1,21 @@
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--bg-color);
+}
+
+.footer-text {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #64748b;
+}

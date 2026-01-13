@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --accent-color: #f59e0b;
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --text-secondary: #94a3b8;
+  --nav-bg: rgba(15, 23, 42, 0.9);
+  
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+  
+  /* Default Dark Mode Card */
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.light-mode {
+  --primary-color: #3b82f6;
+  --secondary-color: #1d4ed8;
+  --accent-color: #f59e0b;
+  --bg-color: #f0f4f8; /* Softer white */
+  --text-color: #1e293b; /* Dark slate */
+  --text-secondary: #475569;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  
+  /* Light Mode Card */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --shadow-color: rgba(148, 163, 184, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+.section {
+  padding: var(--spacing-lg) 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .section-title, 
+  .hero-title, 
+  .hero-subtitle, 
+  .hero-description,
+  .gallery-title,
+  .certificates-subtitle,
+  .achievements-subtitle,
+  h1, h2, h3 {
+    text-align: center !important;
+  }
+  
+  /* Target the Reveal wrapper (which is a div) that directly precedes text elements 
+     or just generic centering for children of containers in mobile might be too aggressive. 
+     Let's try centering div children of specific sections if needed, 
+     OR just make sure .container centers its content. */
+     
+   /* Force margin auto on the direct children of containers that are usually Reveal wrappers for titles */
+   .section .container > div {
+        margin-left: auto;
+        margin-right: auto;
+   }
+}
+
+
+/* Animations managed by Framer Motion now */
