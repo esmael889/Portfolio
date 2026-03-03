@@ -157,25 +157,40 @@
   }
 
   .hero-buttons {
-    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
-     font-size: 1.5rem;
+     font-size: 1.3rem;
      text-align: center;
   }
   
+  .hero-description {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
   .img-container {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
   }
 
   .profile-img {
-    width: 240px;
-    height: 240px;
+    width: 220px;
+    height: 220px;
   }
 }
