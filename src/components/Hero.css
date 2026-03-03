@@ -29,6 +29,7 @@
   color: var(--primary-color);
   background: linear-gradient(to right, var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -148,19 +149,26 @@
     text-align: center;
   }
 
-  /* Target the Reveal wrappers inside hero-content to ensure they don't block centering */
-  .hero-content > div {
+  /* Target the Reveal wrappers inside hero-content to ensure they center their content */
+  .hero-content > div,
+  .hero-content > div > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    width: 100% !important;
+    text-align: center;
   }
 
   .hero-buttons {
+    display: flex !important;
     flex-direction: column;
-    width: 100%;
-    max-width: 300px;
-    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    max-width: 320px;
+    margin: 1.5rem auto 0;
+    gap: 1rem;
   }
 
   .btn {
